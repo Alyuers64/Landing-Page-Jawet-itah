@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Css -->
+  <link rel="stylesheet" href="StyleCom.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <title>Jawet Itah</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;600;700&display=swap');
+
+/* variabel */ 
+:root { 
+  --c-brand: #4e57d4; 
+  --c-brand-rgb: 78, 87, 212; 
+  --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
+  --transition: all 0.5s ease;
+}
+
+*{
+  font-family: 'Nunito', sans-serif; 
+  list-style: none;
+  text-decoration: none !important;   
+}
+
+.container-fluid{
+  font-weight: bold;
+}
+
+p {
+  color: #52525B;
+  text-decoration: none; 
+}
+
+section {
+  padding-top: 8px;
+  padding-bottom: 30px; 
+}
+
+/* home */
+.home {
+  background-color: #BCBCBC;
+  padding-top: 180px;
+  height: 100vh;
+}
+
+.home .heading-home {
+  font-size: 46px;
+  font-weight: 700;
+  color: #1b1919;
+}
+
+.home .heading-home .prop {
+  color: #1b1919;
+}
+
+@media (max-width: 400px) {
+  .home {
+    height: 52em;
+    padding-top: 135px;
+  }
+} 
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .home .heading-home {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .home .heading-home {
+    font-size: 46px;
+  }
+}
+
+.home .subheading-home {
+  font-size: 20px;
+  font-weight: 300;
+  color: #1b1919;
+}
+
+@media (max-width: 767.98px) {
+  .home .subheading-home {
+    font-size: 16px;
+  }
+}
+
+.home .btn-home {
+  margin-top: 125px;
+}
+
+@media (max-width: 767.98px) {
+  .home .btn-home {
+    margin-top: 28px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .home .img-home {
+    max-width: 620px;
+    max-height: 500px;
+  }
+}
+
+
+.btn-master, .btn-first, .btn-second {
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+@media (max-width: 575.98px) {
+  .btn-master, .btn-first, .btn-second {
+    padding: 10px 20px;
+  }
+}
+
+.btn-first {
+  background-color: #3959CC;
+  color: #fff;
+}
+
+.btn-first:hover {
+  background-color: #575757;
+  color: #fff;
+}
+
+.btn-second {
+  border: 2px solid #3959CC;
+  color: #1b1919;
+}
+
+.btn-second:hover {
+  background-color: #3959CC;
+  color: #fff;
+}
+
+.section-title {
+  margin-bottom: 60px;
+  margin-top: 30px; 
+}
+
+.section-title .line {
+  width: 60px;
+  height: 4px;
+  background-color: var(--c-brand);
+  margin: 16px auto 24px auto;
+}
+
+.section-title p {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.theme-shadow {
+  box-shadow: var(--box-shadow);
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+
+/* icon */
+.iconbox {
+  width: 70px;
+  height: 70px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--c-brand-rgb), 0.1);
+  color: var(--c-brand);
+  font-size: 34px;
+  flex: none;
+}
+
+/* pelayanan */
+.service {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  font-weight: bold;
+}
+
+.service::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: rgba(var(--c-brand-rgb), 0.2);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: var(--transition);
+}
+
+
+.service:hover::after {
+  width: 100%;
+  height: 100%;
+  background: var(--c-brand);
+  z-index: -1;
+}
+
+.service:hover h5,
+.service:hover p {
+  color: white;
+}
+
+.service:hover .iconbox {
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+}
+
+.section-padding{
+  padding-bottom: 50px;  
+}
+
+/* tentang kami */
+.about{
+  font-weight: bold;
+}
+
+.mt-md-5 {
+  margin-top: 7rem !important;
+}
+
+.jw img{
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 767px) {
+  .about-text {
+    padding-top: 10px;
+  }
+
+  .mt-md-5 {
+    margin-top: -1rem !important;
+  }
+
+}
+
+.intro-text {
+  margin-bottom: 40px;
+  text-align: center; 
+}
+
+.intro-text p {
+  max-width: 500px;
+  margin: 16px auto 0 auto; 
+}
+
+/* produk */ 
+.collection-img span{
+  top: 20px;
+  right: 20px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+
+} 
+
+.produk{
+  margin-top: 13px; 
+  font-weight: bold;
+}
+
+.produk .line {
+  width: 60px;
+  height: 4px;
+  background-color: var(--c-brand);
+  margin: 16px auto 24px auto;
+}
+
+.produk p {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shadow-on-hover {
+  transition: all 0.3s; 
+}
+
+.shadow-on-hover:hover {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); 
+}
+
+.text-center{
+  font-size: 18px; 
+}
+
+/* maps*/ 
+.tentang {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-weight: bold;
+}
+
+.tentang iframe {
+  width: 100%;
+  border-radius: .5rem;
+  border: 1rem solid #333; 
+}
+
+.tentang iframe:hover {
+  transform: scale(1.03); 
+}
+
+.tentang i{
+  font-size: 30px;  
+
+}
+
+/* footer */
+.footer-distributed {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: 16px sans-serif;
+  padding: 45px 50px; 
+  font-weight: bold;
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0; 
+}
+
+.footer-distributed .footer-left .Luak h4{
+  color: #fff;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.footer-distributed .footer-left .Luak img{
+  width: 50px; 
+  position: relative;
+  margin-left: -10px; 
+  margin-top: -21px;
+  width: 45px; 
+}
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s; 
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s; 
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px; 
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none; 
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 50px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 40px;
+  margin-left: 3px;
+  transition: all .25s; 
+}
+
+.footer-distributed .footer-right a:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1); 
+}
+
+.footer-distributed p.footer-links a:hover {
+  text-decoration: underline; 
+}
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-left {
+    text-align: center; 
+  }
+  .footer-distributed .footer-right {
+    text-align: center;
+    float: none;
+    margin: 0 auto 20px; 
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8; 
+  } 
+}
+</style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #88B3F3;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="https://drive.google.com/uc?id=17HUS-mOpttpAiQe5XO8ZhPJbyCrpTNqn" alt="" width="50" class="d-inline-block align-text-bottom "> JAWET ITAH</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#produk">Produk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#maps">Lokasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tentang">Tentang Kami</a>
+          </li>
+        </ul> 
+        <a href="#kontak"><button class="btn btn-primary me-3">Kontak Kami</button></a>
+      </div></div>
+    </nav>
+
+    <!-- home -->
+    <section class="home" id="home">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="heading-home">
+              Selamat Datang, Di<br>
+              <span class="prop">JAWET ITAH</span>
+            </h1>
+            <p class="subheading-home mt-3">
+            Lengkapi tampilan sehari-harimu dengan memakai produk dari kami, Dijamin berkualitas dan terjangkau!</p>
+
+            <div class="btn-home text-center text-lg-start">
+              <a href="#maps" class="btn-first d-block d-lg-inline">Kunjungi Toko</a>
+              <a href="#kontak" class="btn-second ms-0 ms-lg-4 d-block d-lg-inline mt-4 mt-lg-0">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="img-home mt-3 mx-auto mt-lg-0 mx-lg-0">
+              <img src="https://drive.google.com/uc?id=1if-p7qOFL94o94KrpT1gZeBKQl8azPbb" width="6000" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- pelayanan -->
+    <section id="pelayanan" class="section-padding border-top" data-aos="fade-down" data-aos-delay="150">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="section-title">
+              <h1 class="display-4 fw-semibold">Pelayanan Toko Kami</h1>
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 text-center">
+          <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
+            <div class="service theme-shadow p-lg-5 p-5">
+              <div class="iconbox">
+                <i class="ri-dossier-fill"></i>
+              </div>
+              <h5 class="mt-4 mb-3">Kualitas Original</h5>
+              <p>Kualitas produk anyaman rotan 100% original dan aman dari bahan kimia</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="250">
+            <div class="service theme-shadow p-lg-5 p-5">
+              <div class="iconbox">
+                <i class="ri-line-chart-fill"></i>
+              </div>
+              <h5 class="mt-4 mb-3">Harga Terjangkau</h5>
+              <p>Produk awet dengan harga terjangkau dan ramah dikantong</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="350">
+            <div class="service theme-shadow p-lg-5 p-5">
+              <div class="iconbox">
+                <i class="ri-hand-heart-fill"></i>
+              </div>
+              <h5 class="mt-4 mb-3">Bahan Natural</h5>
+              <p>Bahan asli dari hutan kalimantan tengah dan 100% natural</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- tentang kami -->
+    <section id="tentang" class="about">
+      <div class="container">
+        <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+          <div class="section-title">
+            <h1 class="display-4 fw-semibold">Tentang Kami</h1>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="row gy-4 align-items-center" data-aos="fade-down" data-aos-delay="150">
+          <div class="col-lg-6">
+            <div class="jw shadow-on-hover"><img alt="" class="img-fluid" src="https://drive.google.com/uc?id=1uwzSKN4N1KDeVUwDHKF5vD1eUgrqe859"></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-text" data-aos="fade-down" data-aos-delay="150">
+              <p>JawetItah.Id merupakan sebuah UMKM yang bergerak dibidang anyaman lokal, khususnya di wilayah kota Palangka Raya, Kalimantan Tengah. UMKM ini dikembangkan oleh Raudah sejak 2020. Produk yang dihasilkan dari bahan dasar rotan.</p>
+              <p>JawetItah.Id mejual berbagai produk diantaranya tas, dompet, tikar, topi, lawung, tempat peralatan sekolah, sandal, dan lain-lainnya. Produk-produk ini semua berbahan dasar rotan yang bahannya ini masih cukup mudah ditemukan yaitu di daerah Kalimantan Tengah.</p>
+              <div class="line-3">
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--produk -->
+    <section id="produk" class="produk">
+      <div class="container">
+        <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+          <div class="produk">
+            <h1 class="display-4 fw-semibold">Produk Kami</h1>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1">
+          <!-- produk 1 -->
+          <div class = "col p-2 mt-4 shadow-on-hover" data-aos="fade-down" data-aos-delay="150">
+            <div class = "position-relative">
+              <img src = "https://drive.google.com/uc?id=1CRF5S0X6Xq87mtacN5gMIX0Fo0RP02Ud" class = "w-100">
+            </div>
+            <div class = "text-center">
+              <p class = "text-capitalize my-2 mt-3">Tas Salempang</p>
+              <span class = "fw-bold">Rp. 50.000</span>
+            </div>
+          </div>
+
+          <!-- produk 2 -->
+          <div class = "col p-2 mt-4 shadow-on-hover" data-aos="fade-down" data-aos-delay="150">
+            <div class = "position-relative">
+              <img src = "https://drive.google.com/uc?id=1NKc3erlUKh53QhmN59P72Jyb2XFtwMXw" class = "w-100">
+            </div>
+            <div class = "text-center">
+              <p class = "text-capitalize my-2 mt-3">Tas Anyaman Bermotif</p>
+              <span class = "fw-bold">Rp. 60.000</span>
+            </div>
+          </div>
+
+          <!-- produk 3 -->
+          <div class = "col p-2 mt-4 shadow-on-hover" data-aos="fade-down" data-aos-delay="150">
+            <div class = "position-relative">
+              <img src = "https://drive.google.com/uc?id=1tx-OPFnrsbaYCZSl9MFMrMue6jSfNg08" class = "w-100">
+            </div>
+            <div class = "text-center">
+              <p class = "text-capitalize my-2 mt-3">Tas Anyaman </p>
+              <span class = "fw-bold">Rp. 35.000</span>
+            </div>
+          </div>
+
+          <!-- produk 4 -->
+          <div class = "col p-2 mt-4 shadow-on-hover" data-aos="fade-down" data-aos-delay="150">
+            <div class = "position-relative">
+              <img src = "https://drive.google.com/uc?id=1az_V34D-OrVlMwvjiyC1KZZGeINYnyip" class = "w-100">
+            </div>
+            <div class = "text-center">
+              <p class = "text-capitalize my-2 mt-3">Dompet</p>
+              <span class = "fw-bold">Rp. 48.300</span>
+            </div>
+          </div>
+
+          <!-- produk 5 -->
+          <div class = "col p-2 mt-4 shadow-on-hover" data-aos="fade-down" data-aos-delay="150">
+            <div class = "position-relative">
+              <img src = "https://drive.google.com/uc?id=1CG0uzDnz6I588ZJ3VP5v7pPpYxKGHJB-" class = "w-100">
+            </div>
+            <div class = "text-center">
+              <p class = "text-capitalize my-2 mt-3">Keranjang Rotan</p>
+              <span class = "fw-bold">Rp. 54.000</span>
+            </div>
+          </div>
+
+          <!-- produk 6 -->
+          <div class = "col p-2 mt-4 shadow-on-hover" data-aos="fade-down" data-aos-delay="150">
+            <div class = "position-relative">
+              <img src = "https://drive.google.com/uc?id=1TBetHH3Gx8x7HVWwmT4dcZkQrLJZL16w" class = "w-100">
+            </div>
+            <div class = "text-center">
+              <p class = "text-capitalize my-2 mt-3">Tempat Tisu</p>
+              <span class = "fw-bold">Rp. 30.000</span>
+            </div>
+          </div> 
+        </div>
+      </div>   
+    </section>
+
+    <!--maps-->
+    <section id="maps" class="tentang" data-aos="fade-down" data-aos-delay="150">
+      <div class="container">
+        <div class="col-12 text-center">
+          <div class="section-title">
+            <h1 class="display-4 fw-semibold">Lokasi</h1>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="row gy-4 align-items-center" data-aos="fade-down" data-aos-delay="150">
+          <div class="col-lg-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.7187864901093!2d113.93419689999999!3d-2.2585899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de34d2f2122ea1f%3A0x77398eea42ea9094!2sJawet%20Itah!5e0!3m2!1sid!2sid!4v1666338945754!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="col-lg-6" data-aos="fade-down" data-aos-delay="150"> 
+            <p><i class="ri-map-pin-fill"></i> Jalan Panarung, Kec. Pahandut, Kota Palangka Raya, Kalimantan Tengah 74874</p>
+            <p><i class="ri-phone-fill"></i> Hubungi Kami : 0812-5060-0607 Respon (09.00-18.00 WIB)</p>
+            <a href="https://goo.gl/maps/PPxVJnJDNSBwQiCT9" class="btn btn-primary">Buka Maps</a>
+            <div class="line-3">
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- kontak kami -->
+    <section id="kontak" data-aos="fade-down" data-aos-delay="150" class="pesan">
+      <div class="container">
+        <div class="col-12 text-center">
+          <div class="section-title">
+            <h1 class="display-4 fw-semibold">Kontak Kami</h1>
+            <div class="line"></div>
+          </div>
+        </div>
+        <form action="#" class="row justify-content-center">
+         <div class="col-lg-8" data-aos="fade-down" data-aos-delay="150">
+          <div class="row g-3">
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" placeholder="Nama Lengkap">
+            </div>
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" placeholder="No. Hp">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon1">@</span>
+              <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+            </div>
+            <div class="form-group col-md-6">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Jenis Kelamin</option>
+                <option value="1">Laki-Laki</option>
+                <option value="2">Perempuan</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" placeholder="Alamat Lengkap">
+            </div>
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Pesan" id="floatingTextarea2" style="height: 100px"></textarea>
+              <label for="floatingTextarea2">Pesan</label>
+            </div>
+            <div class="form-group">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked"> Data yang dimasukan sudah benar</label>
+            </div>
+            <div class="form-group text-center col-md-12">
+              <a href="#" class="btn btn-primary">Kirim Pesan</a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer-distributed" id="footer">
+    <div class="footer-right">
+      <a href="https://www.instagram.com/jawetitah.id/"><i class="bx bxl-instagram"></i></a>
+      <a href="https://www.facebook.com/jawet.itah.7" class="bg-primary"><i class="bx bxl-facebook"></i></a>
+      <a href="https://www.linkedin.com/in/ripaldo-alyura-7b4aa7242/"><i class="bx bxl-linkedin"></i></a>
+      <a href="https://github.com/Ripaldo064"><i class="bx bxl-github"></i></a>
+    </div>
+    <div class="footer-left">
+      <div class="Luak">
+        <h4><img src="https://drive.google.com/uc?id=17HUS-mOpttpAiQe5XO8ZhPJbyCrpTNqn" alt="">
+        Jawet Itah</h4>
+      </div>
+      <p class="footer-links">
+        <a class="link-1" href="#">Home</a>
+        <a href="#produk">Produk</a>
+        <a href="#maps">Lokasi</a>
+        <a href="#tentang">Tentang Kami</a>
+      </p>
+      <p>&copy; Copyright 2022, Jawet Itah</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+
+    AOS.init({
+      duration: 800,
+      offset:150,
+    });
+
+  </script>
+
+
+</body>
+</html>
